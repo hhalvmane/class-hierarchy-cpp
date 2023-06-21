@@ -22,7 +22,6 @@ public:
 
 class Parent2 : protected GrandParent {
 protected: 
-    // public і protected від GrandParent
 public:
     void messageP2() { cout << "Parent2 class: "; }
 
@@ -31,9 +30,7 @@ public:
 };
 
 class Child : private Parent, public Parent2 {
-    // private Рarent
 public:
-    // public Parent2 
     void messageC() { cout << "Child class: "; }
     void setprv(string x) { prv = x; }
     void showprv() { cout << prv << endl; }
