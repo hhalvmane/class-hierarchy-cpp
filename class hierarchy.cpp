@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class GrandParent {    /
+class GrandParent {    
     string a;
 protected:
     string p_a;
