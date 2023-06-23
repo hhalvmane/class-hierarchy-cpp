@@ -2,7 +2,7 @@
 
 using namespace std;
 
-class GrandParent {
+class GrandParent {    /
     string a;
 protected:
     string p_a;
@@ -13,14 +13,14 @@ protected:
 
 };
 
-class Parent : public GrandParent {
+class Parent : public GrandParent {    // inherits public members of GrandParent class
     string b;
 public:
     void messageP() { cout << "Parent class: "; }
     string prv;
 };
 
-class Parent2 : protected GrandParent {
+class Parent2 : protected GrandParent {    // inherits GrandParent class as protected
 protected: 
 public:
     void messageP2() { cout << "Parent2 class: "; }
@@ -29,7 +29,7 @@ public:
     void showp_a() { cout << p_a << endl;}
 };
 
-class Child : private Parent, public Parent2 {
+class Child : private Parent, public Parent2 {    // inherits private members of Parent and public members of Parent2 classes
 public:
     void messageC() { cout << "Child class: "; }
     void setprv(string x) { prv = x; }
